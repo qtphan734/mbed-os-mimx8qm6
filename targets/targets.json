@@ -1950,6 +1950,42 @@
             "network-default-interface-type": "ETHERNET"
         }
     },
+    "MIMX8MM6": {
+        "core": "Cortex-M4F",
+        "supported_toolchains": ["GCC_ARM"],
+        "extra_labels": ["NXP", "MCUXpresso_MCUS", "MIMX8MM6"],
+        "is_disk_virtual": true,
+        "macros": ["CPU_MIMX8MM6DVTLZ"],
+        "inherits": ["Target"],
+        "device_has": [
+            "SERIAL",
+            "MPU",
+            "LPTICKER"
+        ],
+        "device_name": "MIMX8MM6"
+    },
+    "MIMX8MQ6": {
+        "core": "Cortex-M4F",
+        "supported_toolchains": ["GCC_ARM"],
+        "extra_labels": ["NXP", "MCUXpresso_MCUS", "MIMX8MQ6"],
+        "is_disk_virtual": true,
+        "macros": ["CPU_MIMX8MQ6DVAJZ"],
+        "inherits": ["Target"],
+        "device_has": [
+            "SERIAL",
+            "MPU",
+            "LPTICKER"
+        ],
+        "device_name": "MIMX8MQ6"
+    },
+    "DARTMX8M": {
+        "inherits": ["MIMX8MQ6"],
+        "extra_labels": ["NXP", "MCUXpresso_MCUS", "MIMX8MQ6", "DARTMX8M"]
+    },
+    "DARTMX8MM": {
+        "inherits": ["MIMX8MM6"],
+        "extra_labels": ["NXP", "MCUXpresso_MCUS", "MIMX8MM6", "DARTMX8MM"]
+    },
     "LPC54114": {
         "supported_form_factors": ["ARDUINO"],
         "core": "Cortex-M4F",
@@ -7835,13 +7871,13 @@
         "overrides": { "lpticker_delay_ticks": 4 },
         "detect_code": ["0839"],
         "device_has_add": [
-			"CRC",
-			"SERIAL_ASYNCH",
-			"SERIAL_FC",
-			"TRNG",
-			"FLASH",
-			"MPU"
-		],
+            "CRC",
+            "SERIAL_ASYNCH",
+            "SERIAL_FC",
+            "TRNG",
+            "FLASH",
+            "MPU"
+        ],
         "features": ["BLE"],
         "release_versions": ["2", "5"],
         "bootloader_supported": true
@@ -8673,36 +8709,36 @@
         "detect_code": ["1703"],
         "macros_add": ["GD32E10X"],
         "release_versions": ["5"]
-	},
+    },
     "TT_M4G9": {
-		"inherits": ["Target"],
-		"core": "Cortex-M4F",
-		"is_disk_virtual": true,
-		"extra_labels": ["TT"],
-		"macros": ["__TT_M4G9__"],
-		"supported_toolchains": ["GCC_ARM", "ARM", "IAR"],
-		"device_has": ["USTICKER",
-                   "RESET_REASON",
-                   "ANALOGIN",
-                   "ANALOGOUT",
-                   "SERIAL",
-                   "I2C",
-                   "I2CSLAVE",
-                   "INTERRUPTIN",
-                   "PORTIN",
-                   "PORTINOUT",
-                   "PORTOUT",
-                   "PWMOUT",
-                   "SLEEP",
-                   "SPI",
-                   "STDIO_MESSAGES",
-                   "FLASH",
-                   "MPU"
-		],
-		"device_name": "TMPM4G9F15FG",
-		"detect_code": ["8013"],
-		"release_versions": ["5"],
-		"bootloader_supported": true
+        "inherits": ["Target"],
+        "core": "Cortex-M4F",
+        "is_disk_virtual": true,
+        "extra_labels": ["TT"],
+        "macros": ["__TT_M4G9__"],
+        "supported_toolchains": ["GCC_ARM", "ARM", "IAR"],
+        "device_has": ["USTICKER",
+            "RESET_REASON",
+            "ANALOGIN",
+            "ANALOGOUT",
+            "SERIAL",
+            "I2C",
+            "I2CSLAVE",
+            "INTERRUPTIN",
+            "PORTIN",
+            "PORTINOUT",
+            "PORTOUT",
+            "PWMOUT",
+            "SLEEP",
+            "SPI",
+            "STDIO_MESSAGES",
+            "FLASH",
+            "MPU"
+        ],
+        "device_name": "TMPM4G9F15FG",
+        "detect_code": ["8013"],
+        "release_versions": ["5"],
+        "bootloader_supported": true
     },
     "__build_tools_metadata__": {
         "version": "1",

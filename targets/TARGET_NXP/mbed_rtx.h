@@ -95,6 +95,12 @@
 #define INITIAL_SP              (0x20028000UL)
 #endif
 
+#elif defined(TARGET_MIMX8MQ6) || defined(TARGET_MIMX8MM6)
+
+#ifndef INITIAL_SP
+#define INITIAL_SP              (0x20020000UL)
+#endif
+
 #elif defined(TARGET_MIMXRT1050_EVK)
 
 #if defined(__ARMCC_VERSION)
